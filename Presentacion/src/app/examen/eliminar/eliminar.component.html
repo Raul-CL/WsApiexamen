@@ -1,0 +1,15 @@
+<form (ngSubmit)="borrar()">
+    <label for="idExamen">IdExamen</label>
+    <mat-form-field>
+        <input matInput placeholder="idExamen" [(ngModel)]="idExamen" name="idExamen" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-select placeholder="Método" [(ngModel)]="metodo" name="metodo" required>
+            <mat-option value="true" ngDefaultControl>EntityFramework</mat-option>
+            <mat-option value="false">Procesos Almacenados</mat-option>            
+        </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Consultar</button>
+</form>

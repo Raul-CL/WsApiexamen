@@ -1,0 +1,40 @@
+<form (ngSubmit)="resultado()">
+    <mat-form-field>
+        <input matInput placeholder="Nombre" [(ngModel)]="nombre" name="nombre" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Descripción" [(ngModel)]="descripcion" name="descripcion" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-select placeholder="Método" [(ngModel)]="metodo" name="metodo" required>
+            <mat-option value="true" ngDefaultControl>EntityFramework</mat-option>
+            <mat-option value="false">Procesos Almacenados</mat-option>            
+        </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Consultar</button>
+</form>
+
+<table mat-table [dataSource]="resultados" *ngIf="resultados.length >= 1">
+
+    <ng-container matColumnDef="idExamen">
+        <th mat-header-cell *matHeaderCellDef> idExamen </th>
+        <td mat-cell *matCellDef="let resultado"> {{resultado.idExamen}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let resultado"> {{resultado.nombre}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef> Descripción </th>
+        <td mat-cell *matCellDef="let resultado"> {{resultado.descripcion}} </td>
+    </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="['nombre', 'descripcion', 'idExamen']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['nombre', 'descripcion', 'idExamen']"></tr>
+</table>
+

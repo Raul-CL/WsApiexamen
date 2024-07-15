@@ -1,0 +1,19 @@
+
+<form (ngSubmit)="agregar()">
+    <mat-form-field>
+        <input matInput placeholder="Nombre" [(ngModel)]="nombre" name="nombre" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Descripción" [(ngModel)]="descripcion" name="descripcion" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-select placeholder="Método" [(ngModel)]="metodo" name="metodo" required>
+            <mat-option value="true" ngDefaultControl>EntityFramework</mat-option>
+            <mat-option value="false">Procesos Almacenados</mat-option>            
+        </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Consultar</button>
+</form>
