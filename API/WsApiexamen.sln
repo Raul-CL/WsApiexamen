@@ -9,15 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dominio", "..\Dominio\Domin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Datos", "..\Datos\Datos.csproj", "{74DC3AB1-6FC4-4E6A-9D1A-2BE8C64641EB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Querys", "Querys", "{43A340B3-EB37-4800-8888-C4C8F189F270}"
-	ProjectSection(SolutionItems) = preProject
-		CrearTabla.sql = CrearTabla.sql
-		spActualizar.sql = spActualizar.sql
-		spAgregar.sql = spAgregar.sql
-		spConsultar.sql = spConsultar.sql
-		spEliminar.sql = spEliminar.sql
-	EndProjectSection
-EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Presentacion", "..\Presentacion\Presentacion.esproj", "{5EFCB275-56C8-4EE9-86BA-FC847D4D02B1}"
 EndProject
 Global
